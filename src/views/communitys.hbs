@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localize um veículos de comunicação</title>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <link rel="icon" href="/images//images/favicon.png"" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/page-communitys.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="page-communitys">
+    <aside class="animate-right">
+      <header>
+        <img src="/images/logo-icon.png" alt="logo" height="120" width="180" />
+
+        <h2>Conheça os veículos de comunicaçã no mapa</h2>
+
+        <p>A plataforma é colaborativa e qualquer iniciativa que se encaixe nos critérios estabelecidos pode se inscrever e participar do mapa. :)</p>
+      </header>
+
+      <footer>
+        <strong>Rio de Janeiro</strong>
+        <p>RJ</p>
+      </footer>
+    </aside>
+
+    <div id="mapid" class="animate-appear"></div>
+
+
+    <div class="communitys">
+      {{#each communitys}}
+        <span hidden
+          data-id="{{this.id}}"
+          data-name="{{this.name}}"
+          data-lat="{{this.lat}}"
+          data-lng="{{this.lng}}"
+        ></span>
+      
+      {{/each}}
+    </div>
+   
+
+    <a class="toggle" onclick="toggleMenu()" title="Critérios"
+    <img src="/images/arrow-left-right.svg" alt="Veja os critérios"></a>  
+    <a href="/create-community" class="create-community" title="Adicione seu veículo">
+      <img src="/images/plus.svg" alt="Adicione seu veículo" />
+    </a>
+  </div>
+
+  <script src="/scripts/page-communitys.js"></script>
+
+</body>
+
+</html>

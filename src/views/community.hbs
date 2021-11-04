@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ community.name }} | Happy</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <link rel="icon" href="/images/favicon.png" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/map.css" />
+  <link rel="stylesheet" href="/css/buttons.css" />
+  <link rel="stylesheet" href="/css/page-community.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="page-community">
+    <aside class="animate-right sidebar">
+
+      <img src="/images/logo-icon.png" alt="logo" height="80" width="120">
+
+      <footer>
+        <button onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar">
+        </button>
+      </footer>
+
+    </aside>
+
+    <main class="animate-appear with-sidebar">
+      <div class="community-details">
+        <img src="{{community.firstImage}}" alt="{{community.name}}" />
+
+        <div class="images">
+          {{#each community.images }}
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="{{this}}" alt="{{community.name}}" />
+          </button>
+          {{/each}}
+
+        </div>
+
+        <div class="community-details-content">
+          <h1>{{community.name}}</h1>
+
+          <p>{{community.about}}</p>
+
+          <div class="map-container">
+            <div id="mapid"></div>
+            <span data-lat="{{community.lat}}" data-lng="{{community.lng}}"></span>
+            <footer>
+              <a target="_blank" href="https://maps.google.com/mobile?q={{community.lat}},{{community.lng}}&z=15">Ver
+                rotas no Google Maps</a>
+            </footer>
+          </div>
+
+          <hr />
+
+          <h2>Redes sociais</h2>
+
+          <p>{{community.instructions}}</p> <br></br>
+
+          <h2>{{community.site}}</h2>
+          
+
+          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{community.whatsapp}}&text=Oi, quero conversar sobre visitas no {{community.name}}" target="_blank"
+            class="primary-button" type="button">
+            <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/scripts/page-community.js"></script>
+</body>
+
+</html>
