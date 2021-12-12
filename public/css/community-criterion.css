@@ -1,0 +1,23 @@
+a.create-community {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+
+    z-index: 10;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    background: #FFC300;
+    border: 0;
+    border-radius: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 200ms;
+}
+
+a.create-community:hover {
+    background: #faa307;
+}

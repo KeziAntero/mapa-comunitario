@@ -15,7 +15,7 @@ aside.sidebar footer button {
     width: 48px;
     height: 48px;
     border: none;
-    background: #12AFCB;
+    background: #FFC300;
     border-radius: 1.6rem;
     cursor: pointer;
 
@@ -27,9 +27,15 @@ aside.sidebar footer button {
 }
 
 aside.sidebar footer button:hover {
-    background: #17D6EB;
+    background: #faa307;
 }
 
 .with-sidebar {
     padding-left: 110px;
 }
+
+@media (min-width: 400px) {
+    aside {
+      padding: 5rem 2rem;
+      
+    }}

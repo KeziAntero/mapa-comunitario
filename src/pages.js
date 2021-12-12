@@ -31,6 +31,9 @@ module.exports = {
       return res.send("Erro no banco de dados!");
     }
   },
+  communitycriterion(req, res) {
+    return res.render("community-criterion");
+  },
 
   async communitys(req, res) {
     try {
@@ -54,20 +57,23 @@ module.exports = {
     if (Object.values(fields).includes("")) {
       return res.send("Todos os campos devem ser preenchidos!");
     }
+   
 
     try {
-      //salvar um orfanato
+      //salvar um veículo
       const db = await Database;
       await saveCommunity(db, {
         lat: fields.lat,
         lng: fields.lng,
         name: fields.name,
         about: fields.about,
-        images: fields.images.toString(),
-        whatsapp: fields.whatsapp,
-        site: fields.site,
-        instructions: fields.instructions,
         year: fields.year,
+        images: fields.images.toString(),
+        site: fields.site,
+        email: fields.email,
+        instagram: fields.instagram,
+        facebook: fields.facebook,
+        twitter: fields.twitter,
         open_on_weekends: fields.open_on_weekends,
       });
 

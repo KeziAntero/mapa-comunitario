@@ -8,11 +8,13 @@ function execute(db) {
             lng TEXT,
             name TEXT,
             about TEXT,
+            year DATE,
             images TEXT,
-            whatsapp TEXT,
             site TEXT,
-            instructions TEXT,
-            year TEXT,
+            email TEXT,
+            instagram TEXT,
+            facebook TEXT,
+            twitter TEXT,
             open_on_weekends TEXT
         );
     `)

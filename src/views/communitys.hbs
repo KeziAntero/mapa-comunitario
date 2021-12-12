@@ -16,29 +16,31 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
-  <link rel="icon" href="/images//images/favicon.png"" />
+<link rel="icon" href="/images/favicon.png" />
 
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/animations.css" />
   <link rel="stylesheet" href="/css/page-communitys.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div id="page-communitys">
     <aside class="animate-right">
       <header>
-        <img src="/images/logo-icon.png" alt="logo" height="120" width="180" />
+        <img src="/images/logo.png" alt="logo" height="120" width="180" />
 
         <h2>Conheça os veículos de comunicaçã no mapa</h2>
 
-        <p>A plataforma é colaborativa e qualquer iniciativa que se encaixe nos critérios estabelecidos pode se inscrever e participar do mapa. :)</p>
+        <p>A plataforma é colaborativa e qualquer iniciativa que se encaixe nos critérios estabelecidos pode se inscrever e participar do mapa. <br>
+          <a href="https://raw.githubusercontent.com/voltdatalab/datalabe-mapa/gh-pages/api_datalabe.json" style="color:#FF0064;text-decoration: none;"><span><b>Acesse os dados</b></span></a> :)</p>
       </header>
 
       <footer>
-        <strong>Rio de Janeiro</strong>
-        <p>RJ</p>
+        
       </footer>
     </aside>
 
@@ -58,9 +60,11 @@
     </div>
    
 
-    <a class="toggle" onclick="toggleMenu()" title="Critérios"
-    <img src="/images/arrow-left-right.svg" alt="Veja os critérios"></a>  
-    <a href="/create-community" class="create-community" title="Adicione seu veículo">
+    <a class="toggle" onclick="toggleMenu()" title="Critérios">
+      <img src="/images/arrow-left-right.svg" alt="Veja os critérios"/>
+    </a>  
+    
+    <a href="/community-criterion" class="create-community" title="Adicione seu veículo">
       <img src="/images/plus.svg" alt="Adicione seu veículo" />
     </a>
   </div>

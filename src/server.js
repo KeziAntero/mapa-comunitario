@@ -20,6 +20,7 @@ server
     .get('/community', pages.community)
     .get('/communitys', pages.communitys)
     .get('/create-community', pages.createCommunity)
+    .get('/community-criterion', pages.communitycriterion)
     .post('/save-community', pages.saveCommunity)
 
 //ligar o servidor

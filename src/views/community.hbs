@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ community.name }} | Happy</title>
+  <title>{{ community.name }} | Mapa da Comunicação</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -24,14 +24,16 @@
   <link rel="stylesheet" href="/css/buttons.css" />
   <link rel="stylesheet" href="/css/page-community.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div id="page-community">
     <aside class="animate-right sidebar">
 
-      <img src="/images/logo-icon.png" alt="logo" height="80" width="120">
+      <img src="/images/logo.png" alt="logo" height="80" width="120">
 
       <footer>
         <button onclick="history.back()">
@@ -59,27 +61,25 @@
 
           <p>{{community.about}}</p>
 
-          <div class="map-container">
-            <div id="mapid"></div>
+          <div >
+           
             <span data-lat="{{community.lat}}" data-lng="{{community.lng}}"></span>
             <footer>
-              <a target="_blank" href="https://maps.google.com/mobile?q={{community.lat}},{{community.lng}}&z=15">Ver
+              <a target="_blank" href="https://maps.google.com/mobile?q={{community.lat}},{{community.lng}}&z=15" class="primary-button" type="button"><img src="/images/marker-local.svg"/> Ver
                 rotas no Google Maps</a>
             </footer>
           </div>
 
           <hr />
 
-          <h2>Redes sociais</h2>
-
-          <p>{{community.instructions}}</p> <br></br>
-
-          <h2>{{community.site}}</h2>
-          
-
-          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{community.whatsapp}}&text=Oi, quero conversar sobre visitas no {{community.name}}" target="_blank"
+          <h2>Contatos</h2>
+            <a href="{{community.site}}" id="botao" target="_blank" class="primary-button" type="button"><img src="/images/globo.png"/> Site</a>
+            <a href="{{community.instagram}}" id="botao"target="_blank"class="primary-button" type="button"><img src="/images/ig.svg"/> Instagram</a>
+            <a href="{{community.facebook}}" id="botao" target="_blank"class="primary-button" type="button"><img src="/images/face.svg"/> facebook</a>
+            <a href="{{community.twitter}}" id="botao" target="_blank"class="primary-button" type="button"><img src="/images/twitter.svg"/> twitter</a>
+            <a href="mailto:{{community.email}}?Subject=Olá,%20gostaria%20desabermaissobre" {{community.name}}" target="_blank"
             class="primary-button" type="button">
-            <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
+            <img src="/images/email.svg" alt="Enviar" />
             Entrar em contato
           </a>
         </div>

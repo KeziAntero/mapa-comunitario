@@ -3,7 +3,7 @@ form {
     width: 70rem;
     margin: 6.4rem auto;
     background: white;
-    border: 1px solid #D3E2E5;
+    
     border-radius: 2rem;
 
     overflow: hidden;
@@ -25,10 +25,10 @@ fieldset legend {
     font-size: 3.2rem;
     line-height:1.5;
 
-    color: #5c8599;
+    color: #586f6b;
     font-weight: 700;
 
-    border-bottom: 1px solid #d3e2e5;
+    border-bottom: 1px solid #e6e8e6;
     margin-bottom: 4rem;
     padding-bottom: 2.4rem;
 }
@@ -38,14 +38,14 @@ fieldset legend {
 }
 
 .input-block label {
-    color: #8FA7B3;
+    color: #586f6b;
     margin-bottom: .8rem;
     line-height: 1.5;
 }
 
 .input-block label span {
     font-size: 1.4rem;
-    color: #8fa7b3;
+    color: #586f6b;
     margin-left: 2.4rem;
     line-height: 1.5;
 }
@@ -54,11 +54,11 @@ fieldset legend {
 .input-block textarea {
     width: 100%;
 
-    background: #f5f8fa;
-    border: 1px solid  #d3e2e5;
+    background: #EBF2F5;
+    border: 1px solid  #e6e8e6;
     border-radius: 2rem;
 
-    color: #5c8599;
+    color: #FF0064;
 }
 
 .input-block input {
@@ -68,7 +68,7 @@ fieldset legend {
 
 .input-block input:valid,
 .input-block textarea:valid {
-    border: 1px solid #A1E9C5;
+    border: 1px solid #e6e8e6;
 }
 
 .input-block textarea {
@@ -79,9 +79,9 @@ fieldset legend {
 }
 
 .input-block.images button {
-    border: 1px dashed #96D2F0;
+    border: 1px dashed #586f6b;
     width: 100%;
-    background: #f5f8fa;
+    background: #EBF2F5;
     height: 6.4rem;
     padding: 0 1.6rem;
     margin-top: 2.4rem;
@@ -102,8 +102,8 @@ fieldset legend {
     position: absolute;
     right: 12px;
     bottom: 14px;
-    background: #FFFFFF;
-    border: 1px solid #D3E2E5;
+    background: #EBF2F5;
+    border: 1px solid #e6e8e6;
     box-sizing: border-box;
     display: flex;
     border-radius: 10px;

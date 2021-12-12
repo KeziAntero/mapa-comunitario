@@ -1,5 +1,17 @@
+
+    
+
+if ('geolocation' in navigator) {
+    
+    navigator.geolocation.getCurrentPosition(position => {
+        
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+
+
+
 // create map
-const map = L.map('mapid').setView([-23.0941753,-52.4313555], 15)
+const map = L.map('mapid').setView([lat, lng], 15)
 
 // create and add tileLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -10,8 +22,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 
 // create icon
 const icon = L.icon({
-    iconUrl: "/images/marker.png",
-    iconSize: [58, 68],
+    iconUrl: "/images/maker.png",
+    iconSize: [60, 40],
     iconAnchor: [29, 68]
 })
 
@@ -36,6 +48,15 @@ map.on('click', (event) => {
 })
 
 
+
+})
+
+ 
+} else {
+    document.getElementById('geolocation not available');
+  }
+
+  
 // adicionar o campo de fotos
 function addPhotoField() {
     // pegar o container de fotos #images
@@ -104,3 +125,22 @@ function validate(event) {
     }
     
 }
+
+/*desabilita o botão no início
+document.getElementById("botao").disabled = true;
+
+//cria um event listener que escuta mudanças no input
+document.getElementById("input-block").addEventListener("input-block", function(event){
+
+  //busca conteúdo do input
+    var conteudo = document.getElementById("input-block").value;
+
+    //valida conteudo do input 
+    if (conteudo == null && conteudo !== '') {
+      //habilita o botão
+      document.getElementById("botao").disabled = false;
+    } else {
+      //desabilita o botão se o conteúdo do input ficar em branco
+      document.getElementById("botao").disabled = true;
+    }
+});*/

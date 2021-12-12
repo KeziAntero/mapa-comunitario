@@ -1,5 +1,12 @@
+
+if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(position => {
+      lat = position.coords.latitude;
+      lng = position.coords.longitude;
+
+
 // create map
-const map = L.map('mapid').setView([-23.0941753,-52.4313555], 15)
+const map = L.map('mapid').setView([lat, lng], 15)
 
 // create and add tileLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -11,8 +18,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 
 // create icon
 const icon = L.icon({
-    iconUrl: "/images/marker.png",
-    iconSize: [58, 68],
+    iconUrl: "/images/maker.png",
+    iconSize: [68, 58],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
 })
@@ -32,8 +39,11 @@ function addMarker({id, name, lat, lng}) {
     L
     .marker([lat, lng], { icon })
     .addTo(map)
+    .bindPopup('Você está aqui.')
     .bindPopup(popup)
 }
+
+
 
 const communitysSpan = document.querySelectorAll('.communitys span')
 
@@ -48,8 +58,14 @@ communitysSpan.forEach( span => {
     addMarker(community)    
 })
 
+})
 
-function toggleMenu(){
+ 
+} else {
+    document.getElementById('geolocation not available');
+  }
+
+  function toggleMenu(){
     let aside = document.querySelector('aside');
     let toggle = document.querySelector('.toggle');
     aside.classList.toggle('active');

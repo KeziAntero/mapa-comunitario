@@ -39,7 +39,7 @@ main h1 {
 .visit a {
   width: 8rem;
   height: 8rem;
-  background: #DE3B88;
+  background: #FFC300;
 
   border: none;
   border-radius: 3rem;
@@ -55,7 +55,7 @@ main h1 {
 }
 
 .visit a:hover {
-  background: #e9026e ;
+  background: #faa307 ;
 }
 
 /* desktop version */
@@ -63,7 +63,7 @@ main h1 {
   #container {
     padding: 5rem 2rem;
     /* shorthand background: image repeat position / size */
-    background: url("../images/map-brazil.png") no-repeat 70% /
+    background: url("../images/") no-repeat 70% /
       clamp(40rem, 50vw, 50rem);
   }
 
